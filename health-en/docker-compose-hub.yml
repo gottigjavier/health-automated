@@ -46,7 +46,7 @@ services:
                 python3 manage.py wait_for_db
                 python3 manage.py migrate auth
                 python3 manage.py migrate --run-syncdb
-                echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='admin').delete(); User.objects.create_superuser('admin', 'admin@project.com', 'password')" | python manage.py shell
+                echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='admin').delete(); User.objects.create_superuser('admin', 'admin@project.com', 'free')" | python manage.py shell
                 python3 manage.py collectstatic --no-input
                 python3 manage.py runserver 0.0.0.0:8000
 
