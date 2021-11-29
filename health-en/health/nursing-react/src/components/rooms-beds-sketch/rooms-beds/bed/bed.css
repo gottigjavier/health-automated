@@ -1,0 +1,76 @@
+.free{
+    background-color: rgb(228, 228, 228);
+    transition: background-color 1s;
+    color: gray;
+    }
+
+.occupied{
+    background-color: rgb(15, 231, 15);
+    transition: background-color 1s;
+    color: white;
+    }
+
+.call{
+    background-color: red;
+    color: white;
+    transition: background-color 1s;
+}
+
+.task{
+    background-color: blue;
+    color: white;
+    transition: background-color 1s;
+}
+
+.call-task{
+    background-color: purple;
+    color: white;
+    transition: background-color 1s;
+}
+
+.bed:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.bed {
+margin: 2px;
+}
+
+.bed-title{
+    font-weight: bold;
+}
+
+.bed-avatar{
+    height: auto;
+    color: rgb(100, 99, 99);
+}
+
+@media screen and (min-width: 768px) {
+    .bed-avatar {
+        padding: auto 2px;
+        width: 2rem;
+    }
+    .bed-title{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .bed-avatar {
+        margin: -5px;
+        /* width: 1.2rem; */
+    }
+    .bed-title{
+        font-size: 1rem;
+    }
+}
+
+
+.shdw {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.shdw:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

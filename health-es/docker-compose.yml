@@ -1,0 +1,58 @@
+version: "3"
+
+services:
+    redis:
+        image: redis:6.2-alpine
+        container_name: redis
+        networks: 
+            - db-net
+
+    db:
+        container_name: db
+        image: postgres:13.2
+        volumes:
+            - ./health/data/db:/var/lib/postgresql/data
+        labels:
+            - app_label.model_name=postgres
+        environment:
+            - POSTGRES_DB=${DB:-db}
+            - POSTGRES_DB_NAME=${DB_NAME:-db}
+            - POSTGRES_USER=${DB_USER:-postgres}
+            - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
+        networks: 
+            - db-net
+    
+    app:
+        container_name: app
+        restart: always
+        image: gottigjavier/health-app:1.2.2
+        ports:
+            - "8000:8000"
+        environment:
+            - POSTGRES_DB=${DB:-db}
+            - POSTGRES_DB_NAME=${DB_NAME:-db}
+            - POSTGRES_USER=${DB_USER:-postgres}
+            - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
+        depends_on:
+            - db
+            - redis
+        networks: 
+            - db-net
+        links:
+            - db:db
+        entrypoint: ["/bin/sh","-c"]
+        command:
+            - |
+                python3 manage.py wait_for_db
+                python3 manage.py migrate auth
+                python3 manage.py migrate --run-syncdb
+                echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='admin').delete(); User.objects.create_superuser('admin', 'admin@project.com', 'password')" | python manage.py shell
+                python3 manage.py collectstatic --no-input
+                python3 manage.py runserver 0.0.0.0:8000
+
+networks: 
+    db-net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 10.10.11.1/22

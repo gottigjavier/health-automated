@@ -1,0 +1,54 @@
+.active{
+    background-color: red;
+    color: white;
+    transition: background-color 1s;
+}
+
+.answered{
+    background-color: grey;
+    color: rgb(162, 255, 162);
+    transition: background-color 1s;
+}
+
+
+.calls-col{
+    overflow: auto; 
+    height: 75%;
+}
+
+.call:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.call-bed-avatar{
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .call-bed{
+        font-size: 1.5rem;
+    }
+    .call-bed-avatar{
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .call-bed{
+        font-size: .8rem;
+    }
+    .call-bed-avatar{
+        width: 1rem;
+    }
+}
+
+
+
+.shdw {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.shdw:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

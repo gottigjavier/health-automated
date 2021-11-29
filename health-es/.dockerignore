@@ -1,0 +1,14 @@
+.git
+.gitignore
+**/data
+**/__pycache__
+**/.github
+**/node_modules
+**/src
+**/public
+**/.eslin*
+**/cache
+docker-compose*
+Dockerfile
+**/packa*
+**/.env

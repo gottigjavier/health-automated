@@ -1,0 +1,132 @@
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+
+.info-modal-title{
+    font-size: 1.75rem;
+    background-color: rgb(6, 207, 221);
+    color: rgb(0, 0, 0);  
+    padding: 0.3rem;  
+}
+
+.modal-subtitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0.5rem 0.1rem 0.1rem 0.1rem;
+    color: gray;
+    font-weight: bold;
+}
+
+.modal-subtitle-center{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0.5rem 0.1rem 0.1rem 0.1rem;
+    color: gray;
+    font-weight: bold;
+    text-align: center;
+}
+
+.p-styled1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .p-styled1, .done-label, .d-box, .tm-box, .done-box, .text-box, .time-box, .info-input-box, .input-box-center, .modal-subtitle, .modal-subtitle-center{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .p-styled1, .done-label, .d-box, .tm-box, .done-box, .text-box, .time-box, .info-input-box, .input-box-center, .modal-subtitle, .modal-subtitle-center{
+        font-size: .8rem;
+    }
+}
+
+
+.info-label{
+    margin-bottom: 0;
+}
+
+.time-box{
+    border: rgb(56, 211, 9) solid 2px;
+    padding: 2px;
+    align-content: center;
+}
+/* 
+.tm-box{
+    width: 40%;
+}
+
+.d-box{
+    width: 60%;
+}
+ */
+.b-center{
+    margin: auto auto auto 3rem;
+}
+
+.info-input-box{
+    border-color: rgb(86, 243, 196);
+    border-radius: 2%;
+    width: 50%;
+    margin: 0;
+    padding: 0.1rem;
+}
+
+.input-box-center{
+    border-color: rgb(86, 243, 196);
+    border-radius: 2%;
+    width: 100%;
+    margin: 0;
+    padding: 0.1rem;
+    align-content: center !important;
+}
+
+.done-box{
+    margin-left: .5rem;
+    width: 70%;
+    padding: .1rem;
+}
+
+.text-box{
+    border-color: rgb(86, 243, 196) !important;
+    width: 90%;
+    height: auto;
+    margin: 0;
+    padding: 0.1rem;
+    align-content: center !important;
+}
+
+.avatar{
+    width: 24%;
+    height: auto;
+    position: relative;
+    margin:3% 38%;
+    border-radius: 50%;
+}
+
+
+.save {
+    border: green solid 1px;
+}
+.delete {
+    border: red solid 1px;
+}
+.discard {
+    border: blue solid 1px;
+}
+
+.shdw {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.shdw:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

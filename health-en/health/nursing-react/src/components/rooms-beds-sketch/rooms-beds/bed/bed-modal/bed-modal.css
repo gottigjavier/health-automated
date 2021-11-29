@@ -1,0 +1,104 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-bed {
+    border: solid 6px;
+    border-color: rgb(182, 182, 182);
+    position:fixed;
+    background: rgb(223, 219, 219);
+    height: 100vh;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    overflow: auto;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.active-false{
+    opacity: 0.6;
+    color: black;
+    font-weight: bold;
+}
+
+.active-false:hover{
+    opacity: 1;
+    color: black;
+    cursor: pointer;
+}
+
+.active-true{
+    color: rgb(0, 89, 255);
+    font-weight: bold;
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .bed-modal-subtitle{
+        font-size: 1rem;
+    }
+    .modal-bed{
+        width: 50%;
+    
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .bed-modal-subtitle{
+        font-size: .8rem;
+    }
+    .modal-bed{
+        width: 95%;
+    
+    }
+}
+
+.bed-modal-title{
+    background-color: rgb(6, 196, 6);
+    color: rgb(0, 0, 0);    
+}
+
+.bed-modal-subtitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 0.5rem;
+}
+
+
+.save {
+    border: green solid 1px;
+}
+.delete {
+    border: red solid 1px;
+}
+.m-discard {
+    border: rgb(145, 248, 255) solid 1px;
+}
+
+
+.avatar{
+    width: 24%;
+    height: auto;
+    position: relative;
+    margin:3% 38%;
+    border-radius: 50%;
+}
+
+.shdw {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.shdw:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
